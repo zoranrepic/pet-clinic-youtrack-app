@@ -1,0 +1,57 @@
+{
+  "name": "pet-clinic-care-tags",
+  "title": "Pet Clinic Care Tags",
+  "description": "Keeps a care-status tag (good / needs attention / doctor review needed) on every Pet Clinic record.",
+  "$schema": "https://json.schemastore.org/youtrack-app.json",
+  "vendor": {
+    "name": "Pet Clinic",
+    "url": "https://vendor.com"
+  },
+  "icon": "icon.svg",
+  "widgets": [
+    {
+      "key": "overall-condition",
+      "name": "Overall condition",
+      "indexPath": "overall-condition/index.html",
+      "extensionPoint": "ISSUE_FIELD_PANEL_FIRST",
+      "iconPath": "overall-condition/widget-icon.svg",
+      "description": "Shows the pet's overall care condition with a short explanation.",
+      "permissions": [
+        "READ_ISSUE"
+      ],
+      "expectedDimensions": {
+        "width": 320,
+        "height": 96
+      }
+    },
+    {
+      "key": "my-pet-summary",
+      "name": "My pet summary",
+      "indexPath": "my-pet-summary/index.html",
+      "extensionPoint": "USER_PROFILE_SETTINGS",
+      "iconPath": "my-pet-summary/widget-icon.svg",
+      "description": "Summary of the pets a doctor is responsible for. Visible to the Doctors group.",
+      "permissions": [
+        "READ_USER"
+      ],
+      "expectedDimensions": {
+        "width": 800,
+        "height": 520
+      },
+      "guard": "({me}) => me.userType !== 'reporter'"
+    },
+    {
+      "key": "clinic-health-overview",
+      "name": "Clinic health overview",
+      "indexPath": "clinic-health-overview/index.html",
+      "extensionPoint": "DASHBOARD_WIDGET",
+      "iconPath": "clinic-health-overview/widget-icon.svg",
+      "description": "Charts of pet care status and overdue visits/vaccinations, filterable by pet type and doctor.",
+      "defaultDimensions": {
+        "width": "8fr",
+        "height": "6fr"
+      }
+    }
+  ],
+  "aiToolPrefix": "pet_clinic"
+}

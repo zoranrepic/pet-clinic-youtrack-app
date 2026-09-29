@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Pet Clinic settings",
+  "description": "Working hours for the urgent-concern review deadline, and Google Calendar access for appointment sync.",
+  "properties": {
+    "workdayStartHour": {
+      "title": "Workday starts at (hour, 0-23)",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 23,
+      "default": 9,
+      "x-scope": "PROJECT"
+    },
+    "workdayEndHour": {
+      "title": "Workday ends at (hour, 1-24)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "default": 17,
+      "x-scope": "PROJECT"
+    },
+    "timeZone": {
+      "title": "Clinic time zone",
+      "description": "Time zone ID, for example Europe/Berlin or America/New_York.",
+      "type": "string",
+      "minLength": 1,
+      "default": "UTC",
+      "x-scope": "PROJECT"
+    },
+    "googleClientId": {
+      "title": "Google OAuth client ID",
+      "description": "From the Google Cloud OAuth client (\u2026apps.googleusercontent.com).",
+      "type": "string",
+      "x-scope": "PROJECT"
+    },
+    "googleClientSecret": {
+      "title": "Google OAuth client secret",
+      "type": "string",
+      "format": "secret",
+      "x-scope": "PROJECT"
+    },
+    "googleRefreshToken": {
+      "title": "Google refresh token",
+      "description": "Created with scripts/google-calendar-auth.mjs after signing in with the clinic calendar account.",
+      "type": "string",
+      "format": "secret",
+      "x-scope": "PROJECT"
+    },
+    "googleCalendarId": {
+      "title": "Google Calendar ID",
+      "description": "Calendar that holds the appointments. Use 'primary' for the signed-in account's main calendar.",
+      "type": "string",
+      "default": "primary",
+      "x-scope": "PROJECT"
+    }
+  }
+}

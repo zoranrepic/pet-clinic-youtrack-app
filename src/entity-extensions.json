@@ -1,0 +1,18 @@
+{
+  "entityTypeExtensions": [
+    {
+      "entityType": "Issue",
+      "properties": {
+        "careTagExplanation": {
+          "type": "string"
+        },
+        "thankYouSent": {
+          "type": "boolean"
+        },
+        "calendarEventId": {
+          "type": "string"
+        }
+      }
+    }
+  ]
+}

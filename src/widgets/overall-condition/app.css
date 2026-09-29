@@ -1,0 +1,43 @@
+.condition {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ring-text-color);
+}
+
+.condition_error {
+  color: var(--ring-error-color);
+}
+
+.condition__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.condition__label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ring-secondary-color);
+}
+
+.condition__status {
+  font-weight: bold;
+}
+
+
+.condition__reason {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ring-secondary-color);
+}
+
+.condition__more {
+  cursor: default;
+  white-space: nowrap;
+}

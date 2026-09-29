@@ -1,0 +1,79 @@
+.summary {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ring-text-color);
+}
+
+.summary__muted {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ring-secondary-color);
+}
+
+.summary__error {
+  color: var(--ring-error-color);
+}
+
+.summary__tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.summary__tile {
+  padding: 12px 16px;
+  border: 1px solid var(--ring-line-color);
+  border-left-width: 4px;
+  border-radius: 8px;
+}
+
+.summary__tile_success {
+  border-left-color: var(--ring-main-success-color);
+}
+
+.summary__tile_warning {
+  border-left-color: var(--ring-main-warning-color);
+}
+
+.summary__tile_error {
+  border-left-color: var(--ring-main-error-color);
+}
+
+.summary__tile_neutral {
+  border-left-color: var(--ring-borders-color);
+}
+
+.summary__count {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.summary__label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ring-secondary-color);
+}
+
+.summary__lists {
+  margin: 24px 0 0;
+}
+
+.summary__list {
+  margin-bottom: 12px;
+}
+
+.summary__list-title {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ring-secondary-color);
+}
+
+.summary__list-pets {
+  margin: 0;
+}
